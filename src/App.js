@@ -4,13 +4,29 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import InteractiveRatingComponent from './challenges/interactive-rating-component-main';
+import OrderSummaryComponent from './challenges/order-summary-component-main';
+import React from 'react';
 
 function App() {
 
   const challengesInfo = [
     {
-      name: 'Interactive rating component',
-      url: "/interactive-rating-component"
+      element: {
+        type: InteractiveRatingComponent
+      },
+      info: {
+        name: 'Interactive rating component',
+        url: "/interactive-rating-component"
+      }
+    },
+    {
+      element: {
+        type: OrderSummaryComponent
+      },
+      info: {
+        name: 'Order summary component',
+        url: "/order-summary-component"
+      }
     }
   ];
 
@@ -18,7 +34,26 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home challengesInfo={challengesInfo} />} />
-        <Route path={challengesInfo[0].url} element={<InteractiveRatingComponent challenge={challengesInfo[0]} />} />
+
+
+        {
+          challengesInfo.map(
+            (challenge, index) =>
+              <Route
+                key={index}
+                path={challenge.info.url}
+                element={
+                  React.createElement(challenge.element.type,
+                    {
+                      challenge: {
+                        name: challenge.info.name,
+                      }
+                    })
+                }
+              />
+          )
+        }
+
       </Routes>
     </BrowserRouter>
   );

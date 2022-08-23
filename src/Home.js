@@ -6,11 +6,14 @@ export default function Home({ challengesInfo }) {
 
             <ul>
 
-                <li>
-                    <Link to={challengesInfo[0].url}>
-                        <h2>{challengesInfo[0].name}</h2>
-                    </Link>
-                </li>
+                {challengesInfo.map(
+                    (challenge, index) =>
+                        <li key={index}>
+                            <Link to={challenge.info.url}>
+                                <h2>{challenge.info.name}</h2>
+                            </Link>
+                        </li>
+                )}
 
             </ul>
         </div>
