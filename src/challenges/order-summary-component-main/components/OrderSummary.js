@@ -9,7 +9,6 @@ const Body = styled.div`
     font-family: "Red Hat Display", sans-serif;
     font-size: 16px;
     background-color: hsl(225, 100%, 94%);
-    margin: 0;
     min-height: 100vh;
   `;
 
@@ -137,30 +136,30 @@ const CancelOrder = styled.button`
 `;
 
 const OrderSummary = () => {
-    return (
-        <Body>
-            <Background>
-                <OrderSummaryComponent>
-                    <OrderSummaryImg />
-                    <OrderSummaryContent>
-                        <OrderSummaryTitle>Order Summary</OrderSummaryTitle>
-                        <OrderSummaryParagraph>
-                            You can now listen to millions of songs, audiobooks, and podcast on
-                            any device anywhere you like!
-                        </OrderSummaryParagraph>
-                        <AnnualPlanContainer>
-                            <AnnualPlanIcon />
-                            <AnnualPlanTitle>Annual Plan</AnnualPlanTitle>
-                            <AnnualPlanPrice>$59.99/year</AnnualPlanPrice>
-                            <AnnualPlanChange>Change</AnnualPlanChange>
-                        </AnnualPlanContainer>
-                        <ProceedPayment>Proceed to Payment</ProceedPayment>
-                        <CancelOrder>Cancel Order</CancelOrder>
-                    </OrderSummaryContent>
-                </OrderSummaryComponent>
-            </Background>
-        </Body>
-    )
+  return (
+    <Body>
+      <Background>
+        <OrderSummaryComponent>
+          <OrderSummaryImg />
+          <OrderSummaryContent>
+            <OrderSummaryTitle>Order Summary</OrderSummaryTitle>
+            <OrderSummaryParagraph>
+              You can now listen to millions of songs, audiobooks, and podcast on
+              any device anywhere you like!
+            </OrderSummaryParagraph>
+            <AnnualPlanContainer>
+              <AnnualPlanIcon />
+              <AnnualPlanTitle>Annual Plan</AnnualPlanTitle>
+              <AnnualPlanPrice>$59.99/year</AnnualPlanPrice>
+              <AnnualPlanChange>Change</AnnualPlanChange>
+            </AnnualPlanContainer>
+            <ProceedPayment>Proceed to Payment</ProceedPayment>
+            <CancelOrder>Cancel Order</CancelOrder>
+          </OrderSummaryContent>
+        </OrderSummaryComponent>
+      </Background>
+    </Body>
+  )
 }
 
 export default OrderSummary;
