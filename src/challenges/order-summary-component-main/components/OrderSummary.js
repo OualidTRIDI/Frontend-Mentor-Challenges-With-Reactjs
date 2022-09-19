@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from "styled-components";
 
 import backgroundDesktop from "../images/pattern-background-desktop.svg";

@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
+import React from 'react';
+
+//Challenges
 import InteractiveRatingComponent from './challenges/interactive-rating-component-main';
 import OrderSummaryComponent from './challenges/order-summary-component-main';
-import React from 'react';
+import IntroComponentWithSignupForm from './challenges/intro-component-with-signup-form-master';
 
 function App() {
 
@@ -24,6 +27,15 @@ function App() {
       info: {
         name: 'Order summary component',
         url: "/order-summary-component"
+      }
+    },
+    {
+      element: {
+        type: IntroComponentWithSignupForm
+      },
+      info: {
+        name: 'Intro component with sign-up form',
+        url: "/intro-component-with-signup-form"
       }
     }
   ];

@@ -5,6 +5,7 @@ import {
     ThankYouImage,
     ThankYouText
 } from "../style/style";
+import React from 'react'
 
 function ThankYouComponent({ clikedRatingNbr }) {
 

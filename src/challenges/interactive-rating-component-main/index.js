@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import {
     Body,
@@ -23,7 +23,6 @@ function InteractiveRatingComponent({ challenge }) {
 
     return (
         <Body>
-
             {ratingComponent ?
                 <RatingComponent
                     clikedRatingNbr={clikedRatingNbr}
