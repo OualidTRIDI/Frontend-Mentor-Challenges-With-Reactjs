@@ -7,6 +7,7 @@ import React from 'react';
 import InteractiveRatingComponent from './challenges/interactive-rating-component-main';
 import OrderSummaryComponent from './challenges/order-summary-component-main';
 import IntroComponentWithSignupForm from './challenges/intro-component-with-signup-form-master';
+import BlogPreviewCardMain from './challenges/blog-preview-card-main';
 
 function App() {
 
@@ -36,6 +37,15 @@ function App() {
       info: {
         name: 'Intro component with sign-up form',
         url: "/intro-component-with-signup-form"
+      }
+    },
+    {
+      element: {
+        type: BlogPreviewCardMain
+      },
+      info: {
+        name: 'Blog preview card main',
+        url: "/blog-preview-card-main"
       }
     }
   ];
